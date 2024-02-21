@@ -1,7 +1,3 @@
-import { allPosts } from "@/.contentlayer/generated"
-import Link from "next/link"
-import fillForm from "@sparticuz/pdffiller";
-
 export default function Home() {
   return (
     <div className="prose dark:prose-invert">
