@@ -213,7 +213,7 @@ export default function Leave() {
   const [dateTimeValue, setDateTimeValue] = useState("");
   const [endDateTimeValue, setEndDateTimeValue] = useState("");
 
-  const handleInputChange = (e) => {
+  const handleInputChange = (e: { target: { type?: any; name?: any; value?: any; }; }) => {
     const { name, value } = e.target;
     let formattedValue = '';
 
