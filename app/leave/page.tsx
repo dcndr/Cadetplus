@@ -272,13 +272,19 @@ export default function Leave() {
     fields.date = currentDateString
     try {
       const pdf = await generate({ template, inputs: [fields] });
-      console.log(pdf);
       const blob = new Blob([pdf.buffer], { type: 'application/pdf' });
+      const fileName = fields.firstName + fields.surname + ' - Leave Form ' + fields.activity + ' ' + fields.startDate + '.pdf';
 
       if (typeof window !== 'undefined') {
-        window.open(URL.createObjectURL(blob));
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = fileName;
+
+        link.click();
+
+        URL.revokeObjectURL(link.href);
       } else {
-        console.error("Window is undefined, could not open your leave.");
+        console.error("Window is undefined, could not download your leave.");
       }
     } catch (error) {
       console.error("Error generating leave.", error);
