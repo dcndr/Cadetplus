@@ -273,7 +273,7 @@ export default function Leave() {
     try {
       const pdf = await generate({ template, inputs: [fields] });
       const blob = new Blob([pdf.buffer], { type: 'application/pdf' });
-      const fileName = fields.firstName + fields.surname + ' - Leave Form ' + fields.activity + ' ' + fields.startDate + '.pdf';
+      const fileName = fields.firstName + ' ' + fields.surname + ' - Leave Form ' + fields.activity + ' ' + fields.startDate + '.pdf';
 
       if (typeof window !== 'undefined') {
         const link = document.createElement('a');
