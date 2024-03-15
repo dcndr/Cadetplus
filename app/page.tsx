@@ -8,7 +8,9 @@ export default function Home() {
             <span className="text-lg">Generate perfect, lightning-fast leave forms, every time.</span>
           </div>
         </a>
-        <span className="opacity-50 pt-8">Any problems lmk <a href="mailto:cadetplus@candra.dev">darrenihaveaproblemwithcadetplus@candra.dev</a></span>
+        <span className="pt-8">Cadetplus is designed for however is not affiliated or endorsed by BHHSACU.</span>
+        <span className="opacity-50 pt-1.5">All forms are public and freely available at <a href="https://bhhsacu.org">bhhsacu.org</a></span>
+        <span className="opacity-50 pt-1.5">Any problems lmk <a href="mailto:cadetplus@candra.dev">cadetplus@candra.dev</a></span>
       </div>
     </div>
   )
